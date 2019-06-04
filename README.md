@@ -1,13 +1,19 @@
 # Mean Teacher using TensorFlow
 
-This is the TensorFlow source code for the Mean Teacher paper. The code runs on Python 3. Install the dependencies and prepare the datasets with the following commands:
+This is a modified version of https://github.com/CuriousAI/mean-teacher after removing all unrelated code and spliting the mean_teacher.py file into several independent functions.
+
+
+You can install the dependencies and prepare the datasets with the following commands:
 
 ```
 pip install tensorflow==1.2.1 numpy scipy pandas
 ./prepare_data.sh
 ```
 
-Note that TensorFlow versions >= 1.3 have [a bug](https://github.com/tensorflow/tensorflow/issues/13351) that causes the code to hang up in the beginning. If you want to provide a workaround, [pull requests are welcome](../../../issues/1).
+or directly use the prebuilt docker image:
+```
+docker pull loklu/mt_tensorflow:tf1.2.1_py35_lib2
+```
 
 To train the model, run:
 
